@@ -1,5 +1,11 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  const sob = objectB.value.join('');
+  return collectionA.map(function(item,index,array) {
+    if(sob.includes(item['key'])){
+      item['count']--;
+    }
+    return item;
+  });
 }
